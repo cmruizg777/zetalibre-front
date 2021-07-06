@@ -1,0 +1,80 @@
+<div class="row">
+  <div class="col col-sm-6 col-md-4">
+    <div class="form-group">
+      <label for="">
+        Id del Comprobante:
+      </label>
+
+      <input class="form-control"
+               [(ngModel)]="formLibro.ComprobanteID"  autocomplete="off">
+    </div>
+  </div>
+  <div class="col col-sm-6 col-md-4">
+    <div class="form-group">
+      <label for="">
+        Id de la Empresa:
+      </label>
+      <input class="form-control"
+               [(ngModel)]="formLibro.IdEmpresa"  autocomplete="off">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col col-sm-6 col-md-4">
+    <div class="form-group">
+      <label for="">
+        Fecha Inicio:
+      </label>
+      <div class="input-group">
+        <input class="form-control" placeholder="yyyy-mm-dd"
+               [(ngModel)]="formLibro.FechaInicio" ngbDatepicker #d="ngbDatepicker" autocomplete="off">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button">
+            <i class="bi bi-calendar-day"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col col-sm-6 col-md-4">
+    <div class="form-group">
+      <label for="">
+        Fecha Fin
+      </label>
+      <div class="input-group">
+        <input class="form-control" placeholder="yyyy-mm-dd"
+               name="dp" [(ngModel)]="formLibro.FechaFin" ngbDatepicker #d="ngbDatepicker" autocomplete="off">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button">
+            <i class="bi bi-calendar-day"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col col-sm-6 col-md-4">
+    <button class="btn btn-success btn-block btn-lg" (click)="consultar()">
+      Consultar
+      <i class="bi bi-search"></i>
+    </button>
+  </div>
+</div>
+
+
+
+
+
+<table class="table table-striped bg-primary text-light">
+  <thead>
+  <tr>
+    <th scope="col">Fecha</th>
+    <th scope="col">Comprobante</th>
+    <th scope="col">Serie y Nro.</th>
+    <th scope="col">Cliente</th>
+    <th scope="col">RUC</th>
+    <th scope="col">Subtotal</th>
+    <th scope="col">Iva</th>
+    <th scope="col">Total</th>
+  </tr>
+  </thead>
+</table>
