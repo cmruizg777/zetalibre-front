@@ -10,6 +10,6 @@ export class VentasService {
   constructor(private api: ApiService) { }
 
   obtenerVentas(libro: LibroVentas){
-    return this.api.get("Listar​/LibroDeVentas?"+libro.getParams())
+    return this.api.get("Listar/LibroDeVentas?"+libro.getParams())
   }
 }

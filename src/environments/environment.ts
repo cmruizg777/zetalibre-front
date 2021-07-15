@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlServer: "http://edwinwla13-001-site1.itempurl.com/api/"
+  urlServer: "https://winnercorp.azurewebsites.net/api/"
 };
 
 /*
